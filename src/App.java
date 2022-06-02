@@ -18,7 +18,7 @@ public class App {
         do {
             System.out.print ("Program Menghitung Bangun Ruang\n");
             System.out.print ("1. Menghitung Tabung\n2. Menghitung Kubus\n3. Menghitung Balok\n4. Menghitung Kerucut\n5.Menghitung Prisma\n6. Keluar ");
-            System.out.print ("Masukkan Pilihanmu (1,2,3,4,5,6) : ");
+            System.out.print ("\nMasukkan Pilihanmu (1,2,3,4,5,6) : ");
             int pilihan=0;
             pilihan = keyboard.nextInt();
 
@@ -39,7 +39,7 @@ public class App {
                 menuPrisma(keyboard);
             }
             */
-            else if (pilihan==5)break; 
+            else if (pilihan==6)break; 
                 System.out.print("Apakah Anda ingin kembali ke menu utama? (y/n)");
              yn = keyboard.next();
              //clear screen
@@ -54,7 +54,15 @@ public class App {
         System.out.print("\033[H\033[2J");  
         System.out.flush(); 
     }
-    
+    /*
+    public static void menuLingkaran (Scanner keyboard)
+    {
+        Lingkaran lingkaran1 = new Lingkaran();
+        System.out.print ("Masukkan Jari Jari = ");
+        lingkaran1.r = keyboard.nextInt();
+        lingkaran1.luasLingkaran();
+    }
+    */
     public static void menuKubus (Scanner keyboard)
     {
         Kubus kubus1 = new Kubus();
@@ -91,14 +99,14 @@ public class App {
     public static void menuTabung (Scanner keyboard)
     {
         Tabung tabung1 = new Tabung();
-        System.out.println("Masukkan Panjang Jari Jari Tabung = ");
-        tabung1.r = keyboard.nextInt();
-        System.out.println("Masukkan Tinggi Tabung = ");
-        tabung1.T = keyboard.nextInt();
-        tabung1.hitungLuasPermukaan();
+        System.out.print("Masukkan Panjang Jari Jari Tabung = ");
+        tabung1.r = keyboard.nextDouble();
+        System.out.print("Masukkan Tinggi Tabung = ");
+        tabung1.T = keyboard.nextDouble();
         tabung1.hitungLuasSelimut();
-        tabung1.tampilkanLP();
         tabung1.tampilkanLS();
+        tabung1.hitungLuasPermukaan();
+        tabung1.tampilkanLP();
     }
 }
         
