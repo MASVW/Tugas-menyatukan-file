@@ -54,15 +54,7 @@ public class App {
         System.out.print("\033[H\033[2J");  
         System.out.flush(); 
     }
-    /*
-    public static void menuLingkaran (Scanner keyboard)
-    {
-        Lingkaran lingkaran1 = new Lingkaran();
-        System.out.print ("Masukkan Jari Jari = ");
-        lingkaran1.r = keyboard.nextInt();
-        lingkaran1.luasLingkaran();
-    }
-    */
+    
     public static void menuKubus (Scanner keyboard)
     {
         Kubus kubus1 = new Kubus();
