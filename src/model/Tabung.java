@@ -1,9 +1,7 @@
 package model;
 public class Tabung {
-    public double r = 14.0;
-    public double T = 15.0;
-    public double LS = 0;
-    public double LP = 0;
+    public double r;
+    public double T;
     public final double PI = 22.0/7;
     public double hitungLuasSelimut()
     {
@@ -15,15 +13,15 @@ public class Tabung {
     }
     public double hitungLuasPermukaan()
     {
-        double LP = LS + (2 * PI * Math.pow(r , 2));
+        double LP = hitungLuasSelimut() + (2 * PI * Math.pow(r , 2));
         return LP;
     }
     public void tampilkanLS()
     {
-        System.out.println("\nLuas Selimut Tabung = " + LS);
+        System.out.println("Luas Selimut Tabung = " + hitungLuasSelimut());
     }
     public void tampilkanLP()
     {
-        System.out.println("Luas Permukaan Tabung = " + LP);
+        System.out.println("Luas Permukaan Tabung = " + hitungLuasPermukaan());
     }
 }
